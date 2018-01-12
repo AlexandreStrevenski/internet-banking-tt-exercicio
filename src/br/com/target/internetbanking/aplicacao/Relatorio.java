@@ -7,6 +7,7 @@ public class Relatorio {
 
 	public static void imprimirCliente(Cliente cliente) {
 		
+		
 		Conta conta = cliente.getConta();
 		
 		System.out.println("Nome: " + cliente.getNome() + " / " + cliente.getEmail());
