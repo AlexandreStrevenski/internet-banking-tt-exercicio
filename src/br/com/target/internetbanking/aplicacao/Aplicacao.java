@@ -1,14 +1,5 @@
 package br.com.target.internetbanking.aplicacao;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
-
-	
 import br.com.target.internetbanking.modelo.Cliente;
 import br.com.target.internetbanking.modelo.Conta;
 import br.com.target.internetbanking.modelo.TipoCliente;
