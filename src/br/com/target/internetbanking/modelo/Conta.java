@@ -39,5 +39,10 @@ public class Conta {
 	public void depositar(Double valorDeposito) {
 		this.saldo += valorDeposito;
 	}
+
+	//TODO: 2 - Adicionar o throws SaldoInsuficienteException no método:
+	public void sacar(Double valorSaque) { 
+		this.saldo -= valorSaque;
+	}
 	
 }

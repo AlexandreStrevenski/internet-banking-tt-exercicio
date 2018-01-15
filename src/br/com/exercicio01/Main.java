@@ -1,6 +1,8 @@
 package br.com.exercicio01;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Iterator;
@@ -10,9 +12,16 @@ import java.util.Set;
 
 public class Main {
 
-	public static void main(String[] args) {
-		//------------------------------------------
-		//MAP
+	public static <T> void main(String[] args) {
+		list();
+	
+		//set();
+		
+		//map();
+		
+	}
+
+	private static void list() {
 		List<Cargo> lista = new ArrayList<>();
 
 		lista.add(new Cargo("Funcionário"));
@@ -21,20 +30,29 @@ public class Main {
 		lista.add(new Cargo("Diretor"));
 		lista.add(new Cargo("Gerente"));
 	
-		for(int i = 0; i < lista.size() ;i++){
+		/*for(int i = 0; i < lista.size() ;i++){
 			System.out.println(lista.get(i).getNome() + " - " + lista.get(i).hashCode());
 		}
 		
 		for (Cargo cargo: lista){
 			System.out.println(cargo);
+		}*/
+		
+		//lista.forEach(s -> System.out.println(s));
+		
+		for (Cargo cargo: lista){
+			System.out.println(cargo.getNome());
 		}
 		
-		lista.forEach(s -> System.out.println(s));
+		System.out.println("-----------------------");
+		lista.sort(Comparator.comparing(Cargo::getNome));
 		
-		lista.forEach(System.out::println);
-		
-		//------------------------------------------
-		//SET
+		for (Cargo cargo: lista){
+			System.out.println(cargo.getNome());
+		}
+	}
+
+	private static void set() {
 		Set<Cargo> set = new HashSet<>();
 
 		set.add(new Cargo("Funcionário"));
@@ -49,10 +67,9 @@ public class Main {
 			Cargo next = iterator.next();
 			System.out.println(next.getNome());
 		}
-		
-		//------------------------------------------
-		//MAP------------------------------------------
+	}
 
+	private static void map() {
 		Map<Integer, String> map = new HashMap();
 		
 		map.put(1, "Funcionário");
@@ -64,7 +81,6 @@ public class Main {
 		for (Map.Entry<Integer, String> item : map.entrySet()){
 			System.out.println(item.getKey() + " - " + item.getValue());
 		}
-		
 	}
 	
 }

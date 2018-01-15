@@ -16,8 +16,5 @@ public class Cargo {
 		this.nome = nome;
 	}
 	
-	@Override
-	public int hashCode() {
-		return this.nome.length();
-	}
+	
 }
