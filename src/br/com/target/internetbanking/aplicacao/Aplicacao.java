@@ -6,7 +6,7 @@ import br.com.target.internetbanking.modelo.TipoCliente;
 import br.com.target.internetbanking.modelo.TipoConta;
 
 public class Aplicacao {
-
+ 
 	public static void main(String[] args) {
 		
 		Conta conta1 = new Conta("31.232.323-X",TipoConta.CONTA_CORRENTE);
