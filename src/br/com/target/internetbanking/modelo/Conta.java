@@ -1,5 +1,8 @@
 package br.com.target.internetbanking.modelo;
 
+import br.com.exercicio02.SaldoInsuficienteException;
+import br.com.exercicio02.ValorSaqueInvalidoException;
+
 public class Conta {
 
 	private Long idConta;
@@ -40,9 +43,19 @@ public class Conta {
 		this.saldo += valorDeposito;
 	}
  
-	//TODO: 2 - Adicionar o throws SaldoInsuficienteException no método:
-	public void sacar(Double valorSaque) { 
+	public void sacar(Double valorSaque) throws SaldoInsuficienteException, ValorSaqueInvalidoException { 
+		if (valorSaque <= 0 ){
+			throw new ValorSaqueInvalidoException(valorSaque);
+		}
+		
+		if (valorSaque > this.saldo){
+			throw new SaldoInsuficienteException(this.saldo, valorSaque);
+		}
+		
+		
+		
 		this.saldo -= valorSaque;
 	}
+	
 	
 }

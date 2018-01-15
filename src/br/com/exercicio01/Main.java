@@ -24,12 +24,23 @@ public class Main {
 	private static void list() {
 		List<Cargo> lista = new ArrayList<>();
 
+		
 		lista.add(new Cargo("Funcionário"));
 		lista.add(new Cargo("Diretor"));
 		lista.add(new Cargo("Estagiário"));
 		lista.add(new Cargo("Diretor"));
 		lista.add(new Cargo("Gerente"));
 	
+		for (Cargo cargo: lista){
+			System.out.println(cargo.getNome());
+		}
+		
+			
+		
+		for (Cargo cargo: lista){
+			System.out.println(cargo.getNome());
+		}
+		
 		/*for(int i = 0; i < lista.size() ;i++){
 			System.out.println(lista.get(i).getNome() + " - " + lista.get(i).hashCode());
 		}
@@ -40,16 +51,13 @@ public class Main {
 		
 		//lista.forEach(s -> System.out.println(s));
 		
-		for (Cargo cargo: lista){
-			System.out.println(cargo.getNome());
-		}
-		
+	/*
 		System.out.println("-----------------------");
 		lista.sort(Comparator.comparing(Cargo::getNome));
 		
 		for (Cargo cargo: lista){
 			System.out.println(cargo.getNome());
-		}
+		}*/
 	}
 
 	private static void set() {
