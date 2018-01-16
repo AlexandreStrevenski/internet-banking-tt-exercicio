@@ -52,8 +52,6 @@ public class Conta {
 			throw new SaldoInsuficienteException(this.saldo, valorSaque);
 		}
 		
-		
-		
 		this.saldo -= valorSaque;
 	}
 	

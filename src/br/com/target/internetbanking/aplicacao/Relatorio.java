@@ -1,5 +1,7 @@
 package br.com.target.internetbanking.aplicacao;
 
+import java.util.List;
+
 import br.com.target.internetbanking.modelo.Cliente;
 import br.com.target.internetbanking.modelo.Conta;
 
@@ -17,5 +19,7 @@ public class Relatorio {
 		System.out.println("Saldo: " + conta.getSaldo());
 		System.out.println("----------------------------------");
 	}
+
+
 
 }
