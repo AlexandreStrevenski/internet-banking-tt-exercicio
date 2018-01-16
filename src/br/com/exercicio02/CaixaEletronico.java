@@ -26,4 +26,7 @@ public class CaixaEletronico {
 		//TODO: 6 - lançar exceção
 	}
 	
+	public void depositar(Conta conta, Double valorDeposito){
+		conta.depositar(valorDeposito);
+	}
 }
